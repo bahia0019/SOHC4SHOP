@@ -8,6 +8,13 @@ body {
 	margin: 0px;
 	font-family: Lucida Grande, Lucida Sans, Verdana, Arial, sans-serif;
 }
+
+br {
+	margin: 1em;
+	display: block;
+	content: "";
+}
+
 #storeLogo {
 	margin-top: 1em;
 }
@@ -76,9 +83,27 @@ body {
 		grid-column: 1/2;
 		grid-row: 3/4;
 	}
+	.fifty-fifty {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+	}
+	.full {
+		width: 100%;
+	}
+	.half {
+		width: 100%;
+	}
 }
 
 @media screen and (min-width: 1024px) {
+	.fifty-fifty {
+		display: flex;
+		flex-direction: row;
+	}
+	.half {
+		width: 50%;
+	}
 }
 
 @media screen and (min-width: 1200px) {
@@ -163,6 +188,8 @@ body {
 
 img {
 	border: 0;
+	max-width: 100%;
+	height: auto;
 }
 
 #piGal ul {
