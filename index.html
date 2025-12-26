@@ -12,11 +12,6 @@
 		<link rel="stylesheet" type="text/css" href="stylesheet.css" />
 		<link
 			rel="stylesheet"
-			type="text/css"
-			href="jquery/ui/redmond/jquery-ui-1.8.6.css"
-		/>
-		<link
-			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 		/>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -140,23 +135,25 @@
 			</div>
 
 			<div class="footer">
-				<p align="center">
-					Copyright &copy; 2016-2024
+				<p style="text-align: center">
+					Copyright &copy; 2016-<span id="current-year"></span>
 					<a href="https://sohc4shop.com">SOHC4shop.com</a>
 				</p>
 			</div>
 		</div>
-		<!-- bodyWrapper //-->
+		<script>
+			const currentYear = new Date().getFullYear()
+			document.getElementById("current-year").textContent = currentYear
+
+			const swiper = new Swiper(".swiper-container", {
+				loop: true,
+				freeMode: true,
+				slidesPerView: 1,
+				speed: 1500,
+				autoplay: {
+					delay: 3000,
+				},
+			})
+		</script>
 	</body>
-	<script>
-		const swiper = new Swiper(".swiper-container", {
-			loop: true,
-			freeMode: true,
-			slidesPerView: 1,
-			speed: 1500,
-			autoplay: {
-				delay: 3000,
-			},
-		})
-	</script>
 </html>
