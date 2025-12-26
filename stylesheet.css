@@ -7,6 +7,7 @@ body {
 	color: #000;
 	margin: 0px;
 	font-family: Lucida Grande, Lucida Sans, Verdana, Arial, sans-serif;
+	line-height: 1.5;
 }
 
 br {
@@ -93,6 +94,14 @@ br {
 	}
 	.half {
 		width: 100%;
+	}
+	.note {
+		background-color: #e88930;
+		border-radius: 10px;
+		color: #fff;
+		padding: 10px;
+		font-size: 14px;
+		font-style: italic;
 	}
 }
 
